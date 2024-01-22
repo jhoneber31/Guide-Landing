@@ -1,0 +1,178 @@
+.horizontalSlider___281Ls{
+    min-width: 250px;
+    @media(min-width:768px) {
+        width: 500px;
+    }
+    @media(min-width:1600px) {
+      width: 710px;
+  }
+}
+.btn-arrow{
+    border: none;
+    background: none;
+    width: 35px;
+    @media(min-width:768px) {
+        width: 70px;
+    }
+    @media(min-width:992px) {
+        width: 80px;
+    }
+}
+.dot-group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    @media(min-width:768px) {
+        margin-top: 40px;
+    }
+    .carousel__dot {
+      width: 10px;
+      height: 10px;
+      border: none;
+      border-radius: 50%;
+      margin: 0 5px;
+      margin-top: 10px;
+      padding: 0;
+      background-color: #c3c4ca;
+      @media(min-width:768px) {
+        width: 20px;
+        height: 20px;
+        margin: 0 15px;
+      }
+    }
+    .carousel__dot--selected {
+      background-color: #97151A;
+      transition: background 0.4s ease;
+    }
+}
+
+.carrousel{
+  width: 100%;
+  .carousel-initialized{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    .carousel-track{
+      width: 100%;
+      @media (min-width: 992px){
+        width: 50%;
+      }
+      @media (min-width: 1200px){
+        width: 68%;
+      }
+      .carousel-item{
+        width: 100% !important;
+      }
+    }
+    .carousel-arrow{
+      position: initial;
+      width: auto;
+      &:nth-child(1) {
+				@media (min-width:992px){
+					margin-right: 50px;
+				}
+      }
+      &:last-child {
+				@media (min-width:992px){
+					margin-left: 50px;
+				}
+      }
+    }
+    .carousel-prev:before{
+      background-image: url('../../assets/icons/arrowL-icon.svg');
+      height: 30px;
+      width: 20px;
+			@media (min-width:768px){
+				height: 100px;
+				width: 50px;
+			}
+			@media (min-width:992px){
+				height: 150px;
+				width: 70px;
+			}
+      @media (min-width:1600px){
+				height: 200px;
+				width: 100px;
+			}
+    }
+    .carousel-next:before{
+      background-image: url('../../assets/icons/arrowR-icon.svg');
+      height: 30px;
+      width: 20px;
+			@media (min-width:768px){
+				height: 100px;
+				width: 50px;
+			}
+			@media (min-width:992px){
+				height: 150px;
+				width: 70px;
+			}
+      @media (min-width:1600px){
+				height: 200px;
+				width: 100px;
+			}
+    }
+  }
+	.carousel-dots{
+		@media (min-width:992px) {
+			margin-top: 30px;
+		}
+		&-active{
+			button::before{
+				opacity: 1 !important; 
+				color: #D60515 !important;
+			}
+		}
+		li{
+			margin: 0;
+			@media (min-width:768px) {
+				margin: 0 10px;
+			}
+			button::before{
+				opacity: 1;
+				color: #c3c4ca;
+				font-size: 35px;
+				@media (min-width:768px) {
+					font-size: 60px;
+				}
+			}
+		}
+	}
+}
+.modal, .overlay{
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+}
+.overlay {
+  background: rgba(49,49,49,0.8);
+}
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1.4;
+  background: #f1f1f1;
+  border: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .iframe-video {
+    width: 200px;
+    height: 300px;
+    padding: 15px;
+    @media(min-width:768px) {
+      width: 400px;
+      height: 700px;
+      padding: 15px;
+    }
+    border-width: 0;
+  }
+}
